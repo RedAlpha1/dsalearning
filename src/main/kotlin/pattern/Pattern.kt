@@ -1,7 +1,6 @@
 package pattern
 
 class Pattern {
-
     fun pyramid(){
         val column = 5
         for (i in 1..column){
@@ -87,5 +86,80 @@ class Pattern {
             println()
         }
     }
+
+    fun alphabetsPatternOne(){
+        println()
+        println()
+        val column = 4
+        val alphabets = 65
+        for (i in 0..column){
+            for (j in 0..i){
+                print((alphabets + j).toChar())
+            }
+            println()
+        }
+    }
+
+    fun alphabetsPatternTwo(){
+        println()
+        println()
+        val column = 4
+        val alphabets = 65
+        var count = 0
+        for (i in 0..column) {
+            count = 0
+            for (j in i..column) {
+                print((alphabets + count).toChar())
+                count++
+            }
+            println()
+        }
+    }
+
+    fun alphabetsPatternThree(){
+        println()
+        println()
+        val column = 4
+        val alphabets = 65
+        for (i in 0..column){
+            for (j in 0..i){
+                print((alphabets + i).toChar())
+            }
+            println()
+        }
+    }
+
+    fun alphabetsPyramids(){
+        println()
+        println()
+        val column = 4
+        val alphabets = 65
+        for (i in 0..column){
+            for (j in 0 until column-i){
+                print(" ")
+            }
+            for (k in 0..i){
+                print((alphabets+k).toChar() + " ")
+            }
+            println()
+        }
+    }
+
+    fun reverseTriangle(){
+        println()
+        println()
+        val column = 4
+        val alphabets = 65
+        var count = 0
+        for (i in column downTo 0){
+            count = i
+            for (j in count..i){
+                print((alphabets+j).toChar())
+                count++
+            }
+            println()
+        }
+    }
+
 
 }
